@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 3</title>
+</head>
+<body>
+    <h1>Antes e Depois</h1>
+
+    <!-- linkando para a função "antdep" -->
+    <button onclick="antdep()">Antecessor e Sucessor</button>
+
+    <script> 
+
+        function antdep(){
+            //criando variavel
+            var num, ant, dep;
+
+            // add valor as variaveis
+            num = Number(prompt("Digite um numero qualquer: "));
+
+            //calculo
+            ant = num - 1;
+            dep = num + 1;
+
+            //resultado
+            alert(" Antes de " + num + ", temos o Numeró " + ant + ". \n Depois de " + num + ", temos o Numeró " + dep + "." );
+        }
+    </script>
+</body>
+</html>

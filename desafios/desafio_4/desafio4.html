@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 4</title>
+</head>
+<body>
+    <h1>Calcular o troco</h1>
+
+    <!-- linkando para a função "antdep" -->
+    <button onclick="valor()">Comprar o produto</button>
+
+    <script> 
+
+        function valor(){
+           
+            //criando variavel
+            var valor, pago, troco, nome;
+
+            // add valor as variaveis
+            nome = prompt("Qual produto Você comprou");
+            valor = Number(prompt("Digite o valor do " + nome +": "));
+            pago = Number(prompt("Digite o valor pago no " + nome + "?"))
+
+            //calculo
+            troco = valor - pago;
+            
+            //resultado
+            if ( troco < 0)
+                alert(" valor insuficiente");
+            else
+                alert("Você comprou o " + nome + "  que custou R$" + valor + " em dinheiro, e vai receber R$" + troco + " de troco \n Volte sempre Prezado cliente" );
+        }
+    </script>
+</body>
+</html>

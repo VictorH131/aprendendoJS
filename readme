@@ -1,0 +1,58 @@
+
+REGRAS DO JAVASCRIPT
+    
+	I = é o contador comum (qualquer coisa pode ser um contador mas anexamos ao I para padronizar)
+
+
+VARIAVEIS
+
+    var - variavel universal ()
+
+    let = variavel local (só pode ser usada localmente, não pode ser camada de qualquer lugar npo codigo apenas na seção criada)
+    
+    TIPOS DE VARIAVEL
+        
+        "integer" - número inteiro. Ex.: 10 ou 50.
+        "float" - número real. Ex.: 10.5 ou 0.8.
+        "character" - uma letra do alfabeto, algarismo, sinal de pontuação ou símbolo. Ex.: 'A' ou '2' ou '$'. Valores do tipo caractere geralmente são representados entre aspas simples ('').
+        "string" - números, letras, palavras, frases e/ou outros símbolos. Ex.: "A" ou "abc123" ou "* é um asterisco.". Valores do tipo cadeia geralmente são representados entre aspas duplas (""); embora em JavaScript se possa utilizar também aspas simples ('').
+        "boolean" - verdadeiro ou falso (true e false em JavaScript).
+
+        Fato a se mencionarDa pra forçar as variaveis
+
+    CONTROLE DE VARIAVEL
+        
+        "=" - ferramenta de atribuição adiciona a uma varivel um valor (para criar uma também tem que por, entre o tipo e o nome).
+        
+        "," - ferramenta de separação, separa e também permite criar e controlar, variaveis ou comandos.
+
+        "+" - ferramenta de adição, soma ou junta duas linhas de comando ou variaveis.
+        "-" - ferramenta de subtraçã, subtra uma variavel ou comando.
+        "*" - ferramenta de multicação, multiplica uma variavel ou comando.
+        "/" - ferramenta de divisão, divide ou separa uma variavel ou comando.
+
+        "||" - ferramenta de opção (OR), permite controlar dando varias possibilidades.
+        " ^ " - ferramenta de opção (XOR), permite controlar dando varias possibilidades de maneira especial.
+
+        "&&" - ferramenta de inclusão, permite controlar e anexar mais de um codigo ao mesmo tempo.
+
+        "<" ou ">" - ferramentas maior ou menor, permite fazer verificações se é maior ou menor.
+
+        "==" - ferramenta de diferença, permite diferenciar duas variaveis ou comando.
+
+        "!" ferramenta de não, ele ele nega um comando ou variavel. 
+        
+        Concatenção 
+            (VARIAVEL_NUM + VARIAVEL_NUM ) - Ele soma
+            (VARIAVEL_STRING + VARIAVEL_NUM ) - Ele Junta os dois (Qualquer coisa junta com um texto ou uma Variavel "string" ele juntara os dois)
+
+COMANDOS
+
+    alert (" ") - é um comando que criara na tela um alerta em caixas de dialogo, ferramenta de  mensagens simples
+        quando ele aparece tem que ser confirmado apertando no butão "OK" para continuar se não ele não sumira
+
+    Confirm (" ") - é um comando que permite ao usuario escolher entre duas opções "OK" e "Cancelar", sendo "OK" = TRUE e "Cancelar" = FALSE
+
+    Prompt (" ") - Comando que permite ao usuario Inserir um Valor seja ele qual for
+
+    onclick="" - é um comando que chamar uma função determinada
