@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 5</title>
+</head>
+<body>
+    <h1>conversor de medidas</h1>
+    
+    <!-- chamando o function val -->
+    <button onclick="val()">Converter</button>
+
+    <!-- aparece os valores quando forem feitos -->
+    <p id="valormet"></p>
+    <p id="valores"></p>
+
+
+    <p>Clique no botão acima para iniciar.</p>
+ 
+    <script>
+        function val()
+        {
+            //valores
+            var m, Km, Hm, Dam, dm, cm, mm;
+ 
+            // add valores
+            m = Number(prompt("Digite uma distância em metros (M)"))
+ 
+            //calculo
+            Km = m / 1000;
+            Hm = m / 100;
+            Dam = m / 10;
+            dm = m * 10;
+            cm = m * 100;
+            mm = m * 1000;
+ 
+            //aparece o texto determinado nos ids escolhidos
+            document.getElementById("valormet").innerHTML = `O valor em metro corresponde a ${m}...`;
+            document.getElementById("valores").innerHTML = `
+             KM = ${Km}<br>
+             HM = ${Hm}<br>
+             Dam = ${Dam}<br>
+             DM = ${dm}<br>
+             CM = ${cm}<br>
+             MM = ${mm}<br>`;
+ 
+        }
+         
+    </script>
+</body>
+</html>

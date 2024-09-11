@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <!--pegando o valor do dolar ao entrar na pagina-->
+    <script>var dolar; 
+        dolar = Number(prompt("qual esta o valor do dolar atual?"));
+    </script>
+</head>
+<body>
+    <!--titulo-->
+    <h1>Conversor do real para Dolar</h1>
+
+    <!--anexando a função DOL()-->
+    <button onclick="dol()">Converter</button>
+
+    <script>
+        function dol()
+        {
+            //variaveis
+            var real, total;
+
+            //pegando quantos reais a pessoa tem
+            real = Number(prompt("Quantos reais você tem na carteira? "));
+
+            //calculo de dolar 
+            total =  real / dolar ;
+            
+            //escreve na tela o resultado
+            alert("voce tem " + total + " de dolares");
+        }
+    </script>
+
+
+</body>
+</html>

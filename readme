@@ -2,7 +2,12 @@
 REGRAS DO JAVASCRIPT
     
 	I = é o contador comum (qualquer coisa pode ser um contador mas anexamos ao I para padronizar)
+    
+    Devemos seguir as regras da sintaxe para funcionar
 
+    Todo código em que terminar com “;” para funciona
+    
+     As variáveis são não tipadas (ou seja, não precisam ser especificas)
 
 VARIAVEIS
 

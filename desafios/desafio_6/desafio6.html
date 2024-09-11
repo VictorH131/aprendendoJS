@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 5</title>
+</head>
+<body>
+    <!--titulo -->
+    <h1>conversor de temperaturas</h1>
+
+    <!--linkando o botão a função temp-->
+    <button onclick="temp()">converter</button>
+
+    <!--id  esta sendo puchado ao JS-->
+    <p id="titu"></p>
+    <p id="valores"></p>
+
+    <script>
+        function temp()
+        {
+            //variaveis
+            var cel, kel, fah;
+
+            //add valor as variaveis
+            cel = Number(prompt("digite uma temperatura em *C(celcius)"));
+
+            //calculo
+            kel = cel + 273.15;
+            fah = (cel * 1.8) + 32;
+
+            //escrevendo no HTML em JS 
+            document.getElementById("titu").innerHTML=`<h2>a temperatura de °C${cel} (Celcius), corresponde a </h2>`;
+            document.getElementById("valores").innerHTML=`
+            ${kel}°K (kelvin) <br>
+            ${fah}°F (Fahrenhat)
+            `;
+
+        }
+
+    </script>
+</body>
+</html>

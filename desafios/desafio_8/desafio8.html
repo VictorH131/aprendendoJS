@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>desafio 8</title>
+</head>
+<body>
+    <!--titulo-->
+    <h1>Calcular o desconto</h1>
+
+    <!--anexando a função DOL()-->
+    <button onclick="dol()">desconto de 10%</button>
+
+    <!-- anexando ao JS-->
+    <p id="titu"></p>
+    <p id="valores"></p>
+
+    <script>
+        function dol()
+        {
+            //variaveis
+            var nome, valor, desc, total;
+
+            //pegando quantos o nome
+            nome = prompt("Qual é o nome do produto? ");
+
+            // pegando o valor do produto
+            valor = Number(prompt("Qual é o valor do " + nome +"?"));
+
+            //calculo
+            desc = valor / 10;
+            total = valor - desc;
+
+            //escrevendo no HTML em forma para mante as variaveis
+            document.getElementById("titu").innerHTML=`<h2> calculando o valor de 10% para ${nome} </h2>`;
+            document.getElementById("valores").innerHTML=`
+            o preço original era ${valor} <br>
+            você acaba de ganhar ${desc} de desconto (-10%) <br>
+            o valor sera de ${total} a pagar no ${nome}
+            `;
+        }
+    </script>
+
+
+</body>
+</html>
