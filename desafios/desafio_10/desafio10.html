@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Resolvendo o valor de Bhaskara</h1>
+
+    <!-- Puchando a fuction BHAS() -->
+    <button onclick="bhas()">Calcular</button>
+
+    <p>conciderando uma equação no formato <strong>ax² + bx + c = 0</strong>, aperte no butão a cima para calcular o valor do 🔺(Delta)</p>
+
+     <!-- linkando ao JS pelo ID -->
+    <p id="titu"></p>
+    <p id="result"></p>
+
+      <!--JS-->
+    <script>
+        function bhas(){
+            // variaveis
+            var a, b, c, del, x1, x2;
+
+            //adicionando valor as variaveis A, B, C 
+            a = Number(prompt("qual é o valor de A?"));
+            b = Number(prompt("qual é o valor de B?"));
+            c = Number(prompt("qual é o valor de C?")); 
+ 
+            //Calculo
+            del = (b * b) - (4 * a * c);
+
+            // Escrevendo na tela utilizando HTML
+            document.getElementById("titu").innerHTML=`<h3> Resolvendo bhaskara </h3>`;
+            document.getElementById("result").innerHTML=` A equação inicial é ${a}x² + ${b}x + ${c} = 0 <br>
+            O calculo realizado sera 🔺(Delta) = ${b}² - 4 * ${a} * ${c}`;
+
+        }
+    </script>
+</body>
+</html>

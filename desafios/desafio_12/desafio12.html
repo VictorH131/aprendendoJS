@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>desafio 12</title>
+</head>
+<body>
+    <h1>Preço mudou</h1>
+
+    <!-- Puchando a fuction BS() -->
+    <button onclick="bs()">verificar</button>
+
+    <p> Clique no botão acima para analizar a mudança de preço </p>
+
+    <!-- linkando ao JS pelo ID -->
+    <p id="titu"></p>
+    <p id="valor"></p>
+    
+      <!--JS-->
+    <script>
+        function bs(){
+            // variaveis
+            var ant, atual, sub, aumt, val;
+
+            //adicionando valor as variaveis
+            ant = Number(prompt("qual o valor antigo do produto?"));
+            atual = Number(prompt("qual é o valor atual do produto?"));
+
+            if (ant > atual){
+                sub = `Hoje o produto está mais barato`;
+            }else{
+                sub = `Hoje o produto esta mais caro`;
+            }
+
+
+            // mostra a resposta na tela
+            document.getElementById("titu").innerHTML=`Analizando os valores informados`
+            document.getElementById("valor").innerHTML =`o produto custava R$ ${ant} e agora custa R$ ${atual}. <br>
+            ${sub}. <br>
+            `;
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>desafio 9</title>
+</head>
+<body>
+    <h1>Reajuste salarial</h1>
+    <!-- Puchando a função BT() -->
+    <button onclick="bt()">Reajuste de salario</button>
+
+    <!-- linkando ao JS pelo ID -->
+    <p id="titu"> </p>
+    <p id="texto"> </p>
+
+    <!--JS-->
+    <script>  
+        function bt(){
+            // variaveis
+            var nome, sala, porc, reaj, total;
+
+            // adicionando valor as variaveis
+             nome = prompt("qual é o nome do funcionario desejado ao reajuste?");
+
+             sala = Number(prompt("qual o salario do " + nome));
+
+             porc = Number(prompt("qual é a porcentagem de reajuste ?"));
+        
+            // calculo
+            reaj = (sala / 100)* porc;
+            total = reaj + sala;
+
+            // Escrevendo na tela utilizando HTML
+            document.getElementById("titu").innerHTML=`<h3> ${nome} Recebeu um aumento salarial </h3>`;
+            document.getElementById("texto").innerHTML=`O salario antigo era R$ ${sala}. <br>
+             Com um aumento de ${porc}%, o salario vai aumentar R$ ${reaj} no proximo mes. <br> 
+             E a partir dai, ${nome} vai passar a recebe R$ ${total}. `;
+
+        }
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>desafio 11</title>
+</head>
+<body>
+    <h1>Ano Bissexto</h1>
+
+    <!-- Puchando a fuction BAS() -->
+    <button onclick="bas()">verificar</button>
+
+    <p> Informe um ano para saber se ele é bissexto </p>
+
+    <!-- linkando ao JS pelo ID -->
+    <p id="valor"></p>
+    
+      <!--JS-->
+    <script>
+        function bas(){
+            // variaveis
+            var ano, valores;
+
+            //adicionando valor a variavel
+            ano = Number(prompt("qual o ano que você quer verificar?"));
+ 
+            // um desvio concatenado comtrolando e definindo a resposta
+            if (ano % 4 == 0){
+                valores = `bissexto`;
+            }else{
+                valores = `nao é bissexto`;
+            }
+
+            // mostra a resposta na tela
+            document.getElementById("valor").innerHTML =`O ano de ${ano} ${valores}`;
+
+        }
+    </script>
+</body>
+</html>
