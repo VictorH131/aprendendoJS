@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>desafio 13</title>
+</head>
+<body>
+    <h1>Situaçao do aluno</h1>
+
+    <!-- Puchando a fuction BAS() -->
+    <button onclick="bt()">Entrar com as notas</button>
+
+    <p> Clique no butap acima para informar as notas do aluno </p>
+
+    <!-- linkando ao JS pelo ID -->
+    <p id="titu"></p>
+    <p id="valor"></p>
+    
+      <!--JS-->
+    <script>
+        function bt(){
+            // variaveis
+            var nome, nota1, nota2, media, apro, ent;
+
+            //adicionando valor a variavel
+            nome = prompt("qual o ano que você quer verificar?");
+            nota1 = Number(prompt("primeira nota de " + nome));
+            nota2 = Number(prompt("segunda nota de " + nome));
+
+            media = (nota1 + nota2) / 2;
+
+            if(media > 6)
+            {
+                apro = `APROVADO`;
+                ent = `acima de 6,0`;
+            }else{
+                if(media > 3)
+                {
+                    apro = `RECUPERAÇÂO`;
+                    ent = `entre de 6,0 e 3,0`;
+                }else{
+                    apro = `REPROVADO`;
+                    ent = `abaixo de 3,0`;
+                }
+            }
+
+            // mostra a resposta na tela
+            document.getElementById("titu").innerHTML =`<h1>Analisando a situação do ${nome}</h1>`;
+            document.getElementById("valor").innerHTML =`Com as notas ${nota1} e ${nota2}, a media é ${media} <br>
+            Com a media ${ent},  o aluno está ${apro}`;
+
+        }
+    </script>
+</body>
+</html>

@@ -21,16 +21,26 @@
     <script>
         function bs(){
             // variaveis
-            var ant, atual, sub, aumt, val;
+            var ant, atual, sub, aumt, aumtsub, val, doup;
 
             //adicionando valor as variaveis
             ant = Number(prompt("qual o valor antigo do produto?"));
             atual = Number(prompt("qual é o valor atual do produto?"));
+            
+            // calculando o valor de alteração
+            val = ((ant - atual) / ant) * 100 ;
+            val = Math.abs(val.toFixed(2));
 
+            // definindo o valor se é pra ci=ma ou pra baixo
             if (ant > atual){
                 sub = `Hoje o produto está mais barato`;
+                aumtsub = `o preço deceu`;
+                doup = `baixo`;
+                
             }else{
                 sub = `Hoje o produto esta mais caro`;
+                aumtsub = `o preço subiu`;
+                doup = `cima`
             }
 
 
@@ -38,7 +48,8 @@
             document.getElementById("titu").innerHTML=`Analizando os valores informados`
             document.getElementById("valor").innerHTML =`o produto custava R$ ${ant} e agora custa R$ ${atual}. <br>
             ${sub}. <br>
-            `;
+            ${aumtsub}  R$${aumt} em relação ao preço anterior. <br>
+            uma variação de ${val}% pra ${doup}.`;
 
         }
     </script>
