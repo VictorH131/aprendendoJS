@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Semafaro</title>
+    <style>
+        /* deixa as imagens centralizadas */
+        #imag, #conteiner, #conteiner2{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+       
+    </style>
+</head>
+<body>
+    <div id="imag">
+        <!-- imagen basica para ser trocada -->
+        <img id="luz" src="img/vermelho.png">
+    </div>
+        
+    <br><br>
+
+    <!-- botões de controle manual das cores -->
+    <div id="conteiner">
+        <button onclick="img('verde')">Deixar verde</button>
+
+        <button onclick="img('vermelho')">Deixar vermelho</button>
+
+        <button onclick="img('amarelo')">Deixar amarelo</button>
+            
+    </div>
+
+    <!-- controle automatico das cores -->
+    <div id="conteiner2">
+
+        <button onclick="iniciarAutomatico()">automatico</button>
+    </div>
+    
+
+    <script>
+        function img(cor) {
+            //variaveis
+            const luz = document.getElementById("luz");
+            let imagem;
+
+            //faz a separação das cores
+            if (cor == 'desligado') {
+                imagem = "img/desligado.png"
+            }else if (cor == 'verde') {
+                imagem = "img/verde.png";
+            } else if (cor == 'amarelo') {
+                imagem = "img/amarelo.png";
+            } else {
+                imagem = "img/vermelho.png";
+            }
+
+            //executa a cor desejada
+            luz.src = imagem;
+        }
+        
+        //controla o rotacionar das cores do automatico
+        function iniciarAutomatico() {
+       
+            let cores = ['vermelho', 'verde', 'amarelo'];
+            let indice = 0;
+
+            intervalo = setInterval(() => {
+                img(cores[indice]);
+                indice = (indice + 1) % cores.length; // Rotaciona entre as cores
+            }, 2000); // Altera a cada 2 segundos
+        }
+        
+    </script>
+</body>
+</html>
