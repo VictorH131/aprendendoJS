@@ -4,21 +4,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IMC - Calc</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+        }
+
+        table{
+            background-color: yellow;
+            border:  1px solid #111;
+            border-radius: 5px;
+        }
+
+        table th{
+            border-bottom: 1px solid #111;
+            font-size: 0.9em;
+        }
+        #resultado{
+            height: 80px;
+            width: 200px;
+            background-color: #111;
+            color: aliceblue;
+        }   
+        
+        #bt{
+            margin-top: 10%;
+            margin-bottom: 5%;
+            display: flex;
+            justify-content: center;
+        }
+        input{
+            height: 30px;
+            font-size: 0.9em;
+            margin-top: 5%;
+            margin-left: 5%;
+        }
+    </style>
 </head>
 <body>
     <div  id="container">
-        <h1>calcule seu IMC</h1>
 
-        <input type="text" placeholder="Peso">
-        <input type="text" placeholder="altura">
-        <input type="text" placeholder="idade">
+        <table>
+            <th>
+                <h2>Calcule seu IMC</h2>
+               
+            </th>
+            <tr>
+                <td>
+                    
+                    <input type="text" id="peso" placeholder="Peso" >   <br>
+                    <input type="text" id="altura" placeholder="altura" > <br>
+                    <input type="text" id="idade" placeholder="idade">  <br>
+                   
+                    
+                    <div id="bt">
+                        <button onclick="btn()"> Calcular </button>
+                    </div>
+                </td>
+            </tr>
+             <tr>
+                <td>
+                    <p id="resultado"></p>
+                </td>
+             </tr>
+        </form>
+        </table>
 
-        <button onclick="btn()"></button>
-    </div>
+        
 
     <script>
         function btn(){
+            var imc, peso = document.getElementById('peso').value, alt = document.getElementById('altura').value, idade = document.getElementById('idade').value;
             
+            
+            alt = alt.replace(",", ".");
+            alt= Number(alt);
+            
+            alt = Math.abs(alt.toFixed(2));
+
+            imc = peso / ( alt * alt );
+
+            document.getElementById('resultado').innerHTML = `o seu IMC é de ${imc} com ${idade} de idade`;
+           
         }
 
     </script>

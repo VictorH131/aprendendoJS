@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Tempo</title>
+    <style>
+        body{
+            
+        }
+        #conteiner {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+        #contador {
+            font-size: 2.5em;
+            color: #333;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>  
+    <div id="conteiner">Formatura da turma de 2023</div>
+
+    <div id="conteiner">    
+        <div id="contador">00 dias 00 Horas 00 Minutos 00 Segundos</div>
+    </div>
+
+    <script>
+
+        // Função para formatar números com 2 dígitos (ex: 5 -> 05)
+        function formatarNumero(numero) {
+            return numero < 10 ? '0' + numero : numero;
+        }
+
+        // Defina a data e hora final para a contagem
+        const dataFinal = new Date("2024-10-23T17:30:00");  // Exemplo: 31 de Dezembro de 2024, às 23:59:59
+
+        // Atualizar o contador a cada segundo
+        const intervalo = setInterval(function () {
+            const agora = new Date();
+            const tempoRestante = dataFinal - agora;
+
+            // Se o tempo já terminou, parar o contador
+            if (tempoRestante <= 0) {
+                clearInterval(intervalo);
+                document.getElementById("contador").innerHTML = "Aluno formado!";
+                return;
+            }
+
+            // Calcular dias, horas, minutos e segundos restantes
+            const dias = Math.floor(tempoRestante / (1000 * 60 * 60 * 24));
+            const horas = Math.floor((tempoRestante % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutos = Math.floor((tempoRestante % (1000 * 60 * 60)) / (1000 * 60));
+            const segundos = Math.floor((tempoRestante % (1000 * 60)) / 1000);
+
+            // Atualizar o elemento da tela com os valores formatados
+            document.getElementById("contador").innerHTML =
+                `${dias} dias ${formatarNumero(horas)} Horas ${formatarNumero(minutos)} minutos ${formatarNumero(segundos)} Segundos`;
+        }, 1000);
+    </script>
+
+</body>
+</html>
